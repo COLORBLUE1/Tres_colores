@@ -1,50 +1,200 @@
 body {
   margin: 0;
   min-width: 100vh;
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
 
-.icon {
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(197, 197, 197);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(235, 235, 235);
+}
+
+.dark body {
+  margin: 0;
+  min-width: 100vh;
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+}
+
+.header_page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.header_page .icon {
   display: flex;
   align-items: center;
   margin: 30px;
   margin-left: 100px;
 }
-.icon .icont--img {
-  width: 100px;
-  height: 100px;
+.header_page .icon .icont--img {
+  width: 45px;
+  height: 45px;
   border-radius: 50px;
 }
-.icon .icont--text {
+.header_page .icon .icont--text {
   margin-left: 10px;
   font-family: "bebas";
-  font-size: 25px;
+  font-size: 15px;
+}
+.header_page .darkmode {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 200px;
+}
+.header_page .icon_theme svg {
+  width: 20px;
+  height: 20px;
+  background: rgba(1, 95, 126, 0.3764705882);
+  border-radius: 50px;
+  padding: 7px;
+  cursor: pointer;
 }
 
 .section--principal {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
   width: 100%;
   height: 100vh;
-  background: linear-gradient(red, transparent, blue);
+  align-content: center;
 }
-.section--principal .section__principal__item__1 {
+.section--principal .categoria--contenedor {
   height: 100%;
   display: flex;
   align-items: center;
 }
-.section--principal .section__principal__item__1 .categoria {
+.section--principal .categoria--contenedor .categoria > .categoria__item {
   font-family: sans-serif;
-}
-.section--principal .section__principal__item__1 .categoria .categoria__item {
   list-style: none;
   margin: 15px;
   display: flex;
   gap: 20px;
   justify-content: space-between;
 }
-.section--principal .section__principal__item__1 .categoria .categoria__item .categoria__punto {
+.section--principal .categoria--contenedor .categoria > .categoria__item .categoria__punto {
   width: 20px;
   height: 20px;
   background: rgb(201, 255, 5);
   border-radius: 50px;
+}
+
+.calendario--contenedor {
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.calendario--contenedor .calendar {
+  width: 70vw;
+  height: 650px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.308);
+  padding: 10px;
+}
+.calendario--contenedor #current-date {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+}
+.calendario--contenedor .filters {
+  margin-left: 60px;
+}
+.calendario--contenedor .filters select {
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 10px;
+}
+.calendario--contenedor .header {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.calendario--contenedor .days-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.calendario--contenedor .day {
+  display: grid;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+.calendario--contenedor .event {
+  color: #ffffff;
+  border-radius: 3px;
+  font-size: 0.8em;
+}
+.calendario--contenedor .event.event-type1 {
+  background-color: #ff6347; /* Color para eventos de tipo 1 */
+}
+.calendario--contenedor .event.event-type2 {
+  background-color: #00bfff; /* Color para eventos de tipo 2 */
+}
+
+.pasar__mes {
+  margin: 20px;
+  padding: 5px;
+}
+.pasar__mes button {
+  background-color: transparent;
+  border: 0px;
+}
+.pasar__mes button:hover {
+  background-color: rgba(51, 51, 51, 0.1921568627);
+  border-radius: 20px;
+  cursor: pointer;
+}
+.pasar__mes button:hover svg {
+  fill: aliceblue;
+}
+.pasar__mes button:hover svg:active {
+  fill: rgba(0, 136, 255, 0.336);
+}
+
+/* Estilos para el modal */
+.modal {
+  display: none; /* Ocultar modal por defecto */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */

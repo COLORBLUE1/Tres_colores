@@ -4,28 +4,133 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/assets/style/index.css" />
+    <meta
+      name="description"
+      content="¡Bienvenido a nuestra página dedicada a la historia de Colombia a través del tiempo! Sumérgete en un fascinante viaje a través de los años con nuestro innovador calendario interactivo. Aquí podrás explorar los eventos más significativos que han moldeado la historia de Colombia, desde momentos políticos y sociales hasta descubrimientos culturales y avances tecnológicos."
+    />
     <title>Tres colores</title>
   </head>
   <body>
-    <div class="icon">
-      <img
-        class="icont--img"
-        src="https://cdn.pixabay.com/photo/2024/02/15/15/46/cat-8575641_1280.jpg"
-        alt="perfil"
-      />
-      <strong class="icont--text"> Tres colores</strong>
+    <div class="header_page">
+      <div class="icon">
+        <img
+          class="icont--img"
+          src="https://cdn.pixabay.com/photo/2024/02/15/15/46/cat-8575641_1280.jpg"
+          alt="perfil"
+        />
+        <strong class="icont--text"> Tres colores</strong>
+      </div>
+      <div class="darkmode">
+        <div class="icon_theme">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path
+              d="M484-80q-84 0-157.5-32t-128-86.5Q144-253 112-326.5T80-484q0-146 93-257.5T410-880q-18 99 11 193.5T521-521q71 71 165.5 100T880-410q-26 144-138 237T484-80Zm0-80q88 0 163-44t118-121q-86-8-163-43.5T464-465q-61-61-97-138t-43-163q-77 43-120.5 118.5T160-484q0 135 94.5 229.5T484-160Zm-20-305Z"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
+
     <section class="section--principal">
-      <div class="section__principal__item__1">
+      <div class="categoria--contenedor">
         <ul class="categoria">
-          <li class="categoria__item">Futbol <div class="categoria__punto"></div></li>
-          <li class="categoria__item">Narcotráfico <div class="categoria__punto"></div></li>
-          <li class="categoria__item">Atentados <div class="categoria__punto"></div></li>
-          <li class="categoria__item">Magnicidios <div class="categoria__punto"></div></li>
+          <li class="categoria__item">
+            Futbol
+            <div
+              class="categoria__punto"
+              style="background-color: #ff5733"
+            ></div>
+          </li>
+          <li class="categoria__item">
+            Narcotráfico
+            <div
+              class="categoria__punto"
+              style="background-color: #ffc300"
+            ></div>
+          </li>
+          <li class="categoria__item">
+            Atentados
+            <div
+              class="categoria__punto"
+              style="background-color: #900c3f"
+            ></div>
+          </li>
+          <li class="categoria__item">
+            Magnicidios
+            <div
+              class="categoria__punto"
+              style="background-color: #3498db"
+            ></div>
+          </li>
         </ul>
       </div>
-      <div class="section__principal__item__2"></div>
+      <div class="calendario--contenedor">
+        <div class="calendar">
+          <div class="header">
+            <span id="current-date"></span>
+            <div class="pasar__mes">
+              <button id="prev-month">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="48px"
+                  viewBox="0 -960 960 960"
+                  width="48px"
+                  fill="#000"
+                >
+                  <path d="M480-360 280-559h400L480-360Z" />
+                </svg>
+              </button>
+              <button id="next-month">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="48px"
+                  viewBox="0 -960 960 960"
+                  width="48px"
+                  fill="#000"
+                >
+                  <path d="m280-400 200-200 200 200H280Z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="filters">
+            <label for="year-filter">Filtrar por año:</label>
+            <select id="year-filter"></select>
+            <label for="month-filter">Filtrar por mes:</label>
+            <select id="month-filter">
+              <option value="0">Enero</option>
+              <option value="1">Febrero</option>
+              <option value="2">Marzo</option>
+              <option value="3">Abril</option>
+              <option value="4">Mayo</option>
+              <option value="5">Junio</option>
+              <option value="6">Julio</option>
+              <option value="7">Agosto</option>
+              <option value="8">Septiembre</option>
+              <option value="9">Octubre</option>
+              <option value="10">Noviembre</option>
+              <option value="11">Diciembre</option>
+            </select>
+          </div>
+          <div class="days-container"></div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div id="event-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="modal-title"></h2>
+          <p id="modal-description"></p>
+        </div>
+      </div>
     </section>
     <footer></footer>
+    <script src="/src/assets/js/calendario.js"></script>
   </body>
 </html>
