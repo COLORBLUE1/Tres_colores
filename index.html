@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/assets/style/index.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <meta
       name="description"
       content="¡Bienvenido a nuestra página dedicada a la historia de Colombia a través del tiempo! Sumérgete en un fascinante viaje a través de los años con nuestro innovador calendario interactivo. Aquí podrás explorar los eventos más significativos que han moldeado la historia de Colombia, desde momentos políticos y sociales hasta descubrimientos culturales y avances tecnológicos."
@@ -36,10 +37,19 @@
         </div>
       </div>
     </div>
-
+    <div class="description">
+      <h3>
+        ¡Bienvenido a nuestra página dedicada a la historia de Colombia a través
+        del tiempo! Sumérgete en un fascinante viaje a través de los años con
+        nuestro innovador calendario interactivo. Aquí podrás explorar los
+        eventos más significativos que han moldeado la historia de Colombia,
+        desde momentos políticos y sociales hasta descubrimientos culturales y
+        avances tecnológicos.
+      </h3>
+    </div>
     <section class="section--principal">
       <div class="categoria--contenedor">
-        <ul class="categoria">
+        <ul class="categoria" data-aos="zoom-in">
           <li class="categoria__item">
             Futbol
             <div
@@ -71,7 +81,7 @@
         </ul>
       </div>
       <div class="calendario--contenedor">
-        <div class="calendar">
+        <div class="calendar" data-aos="fade-up">
           <div class="header">
             <span id="current-date"></span>
             <div class="pasar__mes">
@@ -132,5 +142,9 @@
     </section>
     <footer></footer>
     <script src="/src/assets/js/calendario.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
