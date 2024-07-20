@@ -82,15 +82,16 @@ width: 100%;
 
 .section--principal {
   margin-top: 300px;
+  margin-bottom: 300px;
   display: grid;
-  grid-template-columns: repeat(2, 300px);
+  grid-template-columns: repeat(2, 1fr);
   align-content: center;
 
   .categoria--contenedor {
-    
     height: 100%;
     display: flex;
     align-items: center;
+
     .categoria > .categoria__item {
       font-family: sans-serif;
       list-style: none;
@@ -121,6 +122,8 @@ width: 100%;
     border-radius: 20px;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.308);
     padding: 10px;
+    position: relative;
+    right: 10%;
   }
 
 #current-date{
