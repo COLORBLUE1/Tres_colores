@@ -236,10 +236,10 @@ footer a {
   color: #0014cc;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   body {
     background: red;
-  }
+  } */
   .section--principal {
     margin-top: 300px;
     margin-bottom: 300px;
