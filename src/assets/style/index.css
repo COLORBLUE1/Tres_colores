@@ -236,10 +236,11 @@ footer a {
   color: #0014cc;
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   body {
-    background: red;
-  } */
+    background: linear-gradient(to top, #ffb2b2 0%, #01adff 100%);
+    color: white;
+  } 
   .section--principal {
     margin-top: 300px;
     margin-bottom: 300px;

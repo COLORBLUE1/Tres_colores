@@ -262,10 +262,11 @@ footer{
    }
 }
 
-// @media (max-width: 768px) {
-//   body {
-//     background: red;
-//   }
+ @media (max-width: 768px) {
+  body {
+    background: linear-gradient(to top, #ffb2b2 0%, #01adff 100%);
+    color: white;
+  } 
 
 
   .section--principal {
