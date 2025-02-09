@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   min-width: 100vh;
@@ -53,7 +54,7 @@ body {
 }
 .header_page .icon .icont--text {
   margin-left: 10px;
-  font-family: "bebas";
+  font-family: sans-serif;
   font-size: 15px;
 }
 .header_page .darkmode {
@@ -96,6 +97,33 @@ body {
   height: 20px;
   background: rgb(201, 255, 5);
   border-radius: 50px;
+}
+
+/* Agregar animación hover a los eventos */
+.event:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.event.event-type1 {
+  background-color: #ff6347; /* Futbol */
+}
+
+.event.event-type2 {
+  background-color: #00bfff; /* Narcotráfico */
+}
+
+.event.event-type3 {
+  background-color: #900c3f; /* Atentados */
+}
+
+.event.event-type4 {
+  background-color: #3498db; /* Magnicidios */
+}
+
+.hover-effect:hover {
+  background-color: rgba(0, 0, 0, 0.6); /* Oscurecer el color cuando el usuario pase el ratón */
 }
 
 .calendario--contenedor {
@@ -240,7 +268,7 @@ footer a {
   body {
     background: linear-gradient(to top, #ffb2b2 0%, #01adff 100%);
     color: white;
-  } 
+  }
   .section--principal {
     margin-top: 300px;
     margin-bottom: 300px;
